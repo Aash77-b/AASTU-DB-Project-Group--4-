@@ -1,0 +1,80 @@
+{
+  "database": "property_rental",
+  "collections": [
+    {
+      "name": "users",
+      "validation": {
+        "$jsonSchema": {
+          "bsonType": "object",
+          "required": ["fullName", "email", "password", "role"],
+          "properties": {
+            "_id": { "bsonType": "objectId" },
+            "fullName": { "bsonType": "string" },
+            "email": { "bsonType": "string" },
+            "phone": { "bsonType": "string" },
+            "password": { "bsonType": "string" },
+            "role": {
+              "bsonType": "string",
+              "enum": ["owner", "tenant"]
+            },
+            "createdAt": { "bsonType": "date" }
+          }
+        }
+      }
+    },
+    {
+      "name": "locations",
+      "validation": {
+        "$jsonSchema": {
+          "bsonType": "object",
+          "required": ["city", "subcity"],
+          "properties": {
+            "_id": { "bsonType": "objectId" },
+            "city": { "bsonType": "string" },
+            "subcity": { "bsonType": "string" }
+          }
+        }
+      }
+    },
+    {
+      "name": "properties",
+      "validation": {
+        "$jsonSchema": {
+          "bsonType": "object",
+          "required": ["title", "propertyType", "price", "userId", "locationId"],
+          "properties": {
+            "_id": { "bsonType": "objectId" },
+            "title": { "bsonType": "string" },
+            "description": { "bsonType": "string" },
+            "propertyType": { "bsonType": "string" },
+            "price": { "bsonType": "number" },
+            "bedrooms": { "bsonType": "int" },
+            "areaSize": { "bsonType": "number" },
+            "status": {
+              "bsonType": "string",
+              "enum": ["available", "rented", "not_available"]
+            },
+            "userId": { "bsonType": "objectId" },
+            "locationId": { "bsonType": "objectId" },
+            "createdAt": { "bsonType": "date" },
+            "updatedAt": { "bsonType": "date" }
+          }
+        }
+      }
+    },
+    {
+      "name": "propertyPhotos",
+      "validation": {
+        "$jsonSchema": {
+          "bsonType": "object",
+          "required": ["photoUrl", "propertyId"],
+          "properties": {
+            "_id": { "bsonType": "objectId" },
+            "photoUrl": { "bsonType": "string" },
+            "propertyId": { "bsonType": "objectId" }
+          }
+        }
+      }
+    }
+  ]
+}
