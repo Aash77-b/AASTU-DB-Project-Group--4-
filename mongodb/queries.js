@@ -49,18 +49,18 @@ db.createCollection("propertyPhotos");
 
 
 const user1 = db.users.insertOne({
-  fullName: "Abel Tesfaye",
-  email: "abel@email.com",
-  phone: "0912345678",
+  fullName: "Edilawit Legesse",
+  email: "edel@gmail.com",
+  phone: "0945678909",
   password: "hashed_pw",
   role: "owner",
   createdAt: new Date()
 }).insertedId;
 
 const user2 = db.users.insertOne({
-  fullName: "Selam Kebede",
-  email: "selam@email.com",
-  phone: "0911122233",
+  fullName: "Eden Alemayehu",
+  email: "eden@gmail.com",
+  phone: "0911897589",
   password: "hashed_pw",
   role: "owner",
   createdAt: new Date()
@@ -74,8 +74,8 @@ const loc1 = db.locations.insertOne({
 }).insertedId;
 
 const loc2 = db.locations.insertOne({
-  city: "Adama",
-  subcity: "Kebele 03"
+  city: "Addis Ababa",
+  subcity: "Goro"
 }).insertedId;
 
 
