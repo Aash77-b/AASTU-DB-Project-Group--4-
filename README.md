@@ -1,2 +1,2 @@
 # AASTU-DB-Project-Group--4-
-​![Logical Scheme](logical_scheme.jpg)
+![Logical Scheme](diagrams/logical_scheme.jpg)
