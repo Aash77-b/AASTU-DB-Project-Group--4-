@@ -1,80 +1,77 @@
 {
-  "database": "property_rental",
-  "collections": [
+  "users":[
     {
-      "name": "users",
-      "validation": {
-        "$jsonSchema": {
-          "bsonType": "object",
-          "required": ["fullName", "email", "password", "role"],
-          "properties": {
-            "_id": { "bsonType": "objectId" },
-            "fullName": { "bsonType": "string" },
-            "email": { "bsonType": "string" },
-            "phone": { "bsonType": "string" },
-            "password": { "bsonType": "string" },
-            "role": {
-              "bsonType": "string",
-              "enum": ["owner", "tenant"]
-            },
-            "createdAt": { "bsonType": "date" }
-          }
-        }
-      }
+            "_id": "u1" ,
+            "fullName": "Eden Alemayehu",
+            "email": "eden@gmail.com",
+            "phone": "0956748932",
+            "password": "hashed_pw",
+            "role": "owner", 
+            "createdAt":  "2026-05-01" 
     },
     {
-      "name": "locations",
-      "validation": {
-        "$jsonSchema": {
-          "bsonType": "object",
-          "required": ["city", "subcity"],
-          "properties": {
-            "_id": { "bsonType": "objectId" },
-            "city": { "bsonType": "string" },
-            "subcity": { "bsonType": "string" }
-          }
-        }
-      }
+            "_id": "u2",
+            "fullName": "Ashenafi Gebremedhn",
+            "email": "ashenafi@gmail.com",
+            "phone": "0946848962",
+            "password": "hashed_pw",
+            "role": "tenant", 
+            "createdAt":  "2026-05-02" 
+     }
+  ],
+
+  "locations": [
+    {
+      "_id": "l1",
+      "city": "Addis Ababa",
+      "subcity": "Bole"
     },
     {
-      "name": "properties",
-      "validation": {
-        "$jsonSchema": {
-          "bsonType": "object",
-          "required": ["title", "propertyType", "price", "userId", "locationId"],
-          "properties": {
-            "_id": { "bsonType": "objectId" },
-            "title": { "bsonType": "string" },
-            "description": { "bsonType": "string" },
-            "propertyType": { "bsonType": "string" },
-            "price": { "bsonType": "number" },
-            "bedrooms": { "bsonType": "int" },
-            "areaSize": { "bsonType": "number" },
-            "status": {
-              "bsonType": "string",
-              "enum": ["available", "rented", "not_available"]
-            },
-            "userId": { "bsonType": "objectId" },
-            "locationId": { "bsonType": "objectId" },
-            "createdAt": { "bsonType": "date" },
-            "updatedAt": { "bsonType": "date" }
-          }
-        }
-      }
+      "_id": "l2",
+      "city": "Addis Ababa",
+      "subcity": "Goro"
+    }
+  ],
+  
+  "properties": [
+    {
+      "_id": "p1",
+      "title": "2 Bedroom Apartment",
+      "description": "Clean and modern apartment",
+      "propertyType": "apartment",
+      "price": 15000,
+      "bedrooms": 2,
+      "areaSize": 120,
+      "status": "available",
+      "userId": "u1",
+      "locationId": "l1",
+      "createdAt": "2026-05-01"
     },
     {
-      "name": "propertyPhotos",
-      "validation": {
-        "$jsonSchema": {
-          "bsonType": "object",
-          "required": ["photoUrl", "propertyId"],
-          "properties": {
-            "_id": { "bsonType": "objectId" },
-            "photoUrl": { "bsonType": "string" },
-            "propertyId": { "bsonType": "objectId" }
-          }
-        }
-      }
+      "_id": "p2",
+      "title": "Family House",
+      "description": "Spacious house with parking",
+      "propertyType": "house",
+      "price": 25000,
+      "bedrooms": 3,
+      "areaSize": 200,
+      "status": "rented",
+      "userId": "u1",
+      "locationId": "l2",
+      "createdAt": "2026-05-03"
+    }
+  ],
+
+  "propertyPhotos": [
+    {
+      "_id": "ph1",
+      "photoUrl": "https://img.com/p1.jpg",
+      "propertyId": "p1"
+    },
+    {
+      "_id": "ph2",
+      "photoUrl": "https://img.com/p2.jpg",
+      "propertyId": "p2"
     }
   ]
 }
