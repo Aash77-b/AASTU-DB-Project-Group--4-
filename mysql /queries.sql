@@ -85,15 +85,15 @@ FROM property WHERE title='Studio Room';
 -- some queries are here
 SELECT p.title, p.price, p.bedrooms, l.city, l.subcity, ph.photo_url
 FROM property p
-JOIN location l ON p.location_id = l.location_id
-LEFT JOIN property_photo ph ON p.property_id = ph.property_id;
+JOIN location l on p.location_id = l.location_id
+LEFT JOIN property_photo ph on p.property_id = ph.property_id;
 
 SELECT p.*, u.full_name, ue.email, up.phone, l.city, l.subcity
 FROM property p
-JOIN user u ON p.user_id = u.user_id
-JOIN user_email ue ON u.user_id = ue.user_id
-JOIN user_phone up ON u.user_id = up.user_id
-JOIN location l ON p.location_id = l.location_id
+    JOIN user u on p.user_id = u.user_id
+ JOIN user_email ue on u.user_id = ue.user_id
+     JOIN user_phone up on u.user_id = up.user_id
+JOIN location l on p.location_id = l.location_id
 WHERE p.property_id = 1;
 
 SELECT * 
@@ -116,18 +116,18 @@ SELECT
     p.bedrooms,
     p.area_size,
     p.status,
-    u.full_name AS owner_name,
-    ue.email AS owner_email,
-    up.phone AS owner_phone,
+    u.full_name as owner_name,
+    ue.email as owner_email,
+    up.phone as owner_phone,
     l.city,
     l.subcity,
     pp.photo_url
-FROM property p
-JOIN user u ON p.user_id = u.user_id
-LEFT JOIN user_email ue ON u.user_id = ue.user_id
-LEFT JOIN user_phone up ON u.user_id = up.user_id
-JOIN location l ON p.location_id = l.location_id
-LEFT JOIN property_photo pp ON p.property_id = pp.property_id
-ORDER BY p.property_id;
+from property p
+join user u on p.user_id = u.user_id
+left join user_email ue on u.user_id = ue.user_id
+left join user_phone up on u.user_id = up.user_id
+join location l on p.location_id = l.location_id
+left join property_photo pp on p.property_id = pp.property_id
+order by p.property_id;
 
 
