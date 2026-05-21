@@ -107,7 +107,6 @@ FROM property
 WHERE status = 'available';
 
 ----
-USE Rreal_estate_rental;
 SELECT 
     p.property_id,
     p.title,
