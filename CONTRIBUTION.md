@@ -12,6 +12,8 @@ We would like to thank the following individuals for their valuable contribution
 | **Edilawit Legesse** | MongoDB Implementation | Designing and implementing MongoDB schemas, writing queries, managing document structures, and optimizing NoSQL performance. |
 | **Eden Alemayehu** | Database Designer | Conceptual and logical database design, creating ER diagrams, normalizing relational schemas, and ensuring data integrity. |
 | **Ashenafi Gebremedhin** | GitHub Management | Managing repository structure, version control workflows, pull requests, issue tracking, and ensuring smooth collaboration on GitHub. |
+| **Abel Yohannes** | MySQL Implementation | Designing MySQL schemas, writing complex SQL queries, optimizing joins and indexing, and ensuring relational database performance. |
+| **Bereket simegn** | Database Normalization | Leading the normalization process up to 3NF and BCNF, eliminating redundancies, ensuring functional dependencies, and maintaining data consistency. |
 
 ---
 
@@ -25,6 +27,8 @@ This assignment was completed as part of a collaborative database systems course
 
 - `/design` – ER diagrams, schema definitions (Eden Alemayehu)
 - `/mongodb` – MongoDB scripts and query examples (Edilawit Legesse)
+- `/mysql` – MySQL schemas and SQL queries (Abel yohannes)
+- `/normalization` – Normalization steps, functional dependencies, and BCNF analysis (Bereket simegn)
 - `/analysis` – Business requirements and documentation (Dagmawit Biniyam)
 - `/.github` – GitHub templates and workflows (Ashenafi Gebremedhin)
 
@@ -35,5 +39,5 @@ This assignment was completed as part of a collaborative database systems course
 All contributions followed a Git feature‑branch workflow coordinated by Ashenafi. Code reviews were done via pull requests, and all changes were logged with meaningful commit messages.
 
 ---
- 
+
 *© Database Assignment Team*
